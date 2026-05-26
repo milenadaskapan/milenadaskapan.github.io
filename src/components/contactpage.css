@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:wght@200..800&family=Merriweather:ital,wght@0,300..900;1,300..900&family=Supermercado+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  margin: 0;
+}
+
+.contactbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(4px) brightness(0.8);
+}
+
+.contact-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto; 
+}
+
+.contactcard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.03);
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 40px rgb(182, 234, 253),
+    0 0 80px rgb(255, 255, 255);
+}
+
+.seal1 {
+  position: absolute;
+  height: 300px;
+  width: auto;
+
+  top: 40%;  
+  right: 52%;          
+  transform: translateY(-50%);
+  animation: glow 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.exit {
+  position: absolute;
+  top: 20%;
+  right: 18%;
+
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.exit-btn {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+
+
+@keyframes glow {
+  0% {
+    filter: 
+      drop-shadow(0 0 6px rgba(180, 235, 255, 0.8))
+      drop-shadow(0 0 12px rgba(150, 220, 255, 0.5));
+  }
+
+  50% {
+    filter: 
+      drop-shadow(0 0 18px rgba(180, 235, 255, 1))
+      drop-shadow(0 0 35px rgba(150, 220, 255, 0.7));
+  }
+
+  100% {
+    filter: 
+      drop-shadow(0 0 6px rgba(180, 235, 255, 0.8))
+      drop-shadow(0 0 12px rgba(150, 220, 255, 0.5));
+  }
+}
+
+.line {
+  position: absolute;
+  left: 45%; 
+
+  font-family: "VT323", monospace;
+  font-size: 34px;
+  color: black;
+
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+
+  width: 0;
+}
+.line1 {
+  top: 28%;
+  animation: sealtyping1 1.5s steps(18) forwards, blink 0.8s infinite;
+}
+
+.line2 {
+  top: 35%;
+  animation: sealtyping2 2s steps(35) forwards;
+  animation-delay: 1.5s;
+}
+
+.line3 {
+  top: 42%;
+  animation: sealtyping3 2s steps(30) forwards;
+  animation-delay: 3.5s;
+}
+@keyframes sealtyping1 {
+  from { width: 0 }
+  to { width: 22ch; }
+}
+
+@keyframes sealtyping2 {
+  from { width: 0 }
+  to { width: 42ch; }
+}
+
+@keyframes sealtyping3 {
+  from { width: 0 }
+  to { width: 32ch; }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.icon-row {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+.icon-btn {
+  height: 80px;
+  width: auto;
+  cursor: pointer;
+  animation: logopulse 3s ease-in-out infinite;
+
+  filter: 
+    drop-shadow(0 0 5px rgba(123, 44, 255, 0.8))
+    drop-shadow(0 0 1px rgba(123, 44, 255, 0.6));
+
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+@keyframes logopulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

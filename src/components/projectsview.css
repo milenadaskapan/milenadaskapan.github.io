@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:wght@200..800&family=Merriweather:ital,wght@0,300..900;1,300..900&family=Supermercado+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.viewPage {
+  position: relative;
+  z-index: 1;
+}
+
+.menuButton {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  z-index: 1000;
+  
+}
+.menu {
+  width: 30px;
+  height: auto;
+  filter:
+    drop-shadow(0 0 5px rgba(255, 255, 255, 0.781))
+    drop-shadow(0 0 2px rgba(255, 255, 255, 0.719));
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+
+  transition: transform 0.25s ease;
+}
+
+.menu:hover {
+  transform: scale(1.08);
+}
+
+
+.projectviewbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(2px) brightness(0.6);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  gap: 40px;
+  margin-top: 100px;
+  color: #aaa;
+}
+
+.tabs span {
+  cursor: pointer;
+}
+
+.tabs .active {
+  color: rgb(255, 255, 255);
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  position: relative;
+  font-family: 'Bricolage Grotesque', sans-serif;
+
+
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.viewport {
+  width: 1050px;
+  height: 620px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide {
+  width: 1050px;
+  min-width: 900px;
+  height: 520px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+
+.projectcard {
+  width: 900px;
+  height: 420px;
+  display: flex;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  font-family: 'Bricolage Grotesque', sans-serif;
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.96),
+    0 0 10px rgba(255, 255, 255, 0.835);
+
+  border-radius: 28px;
+
+  position: relative;
+  z-index: 2;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+.projectcard:hover {
+  transform: scale(1.03) translateY(-6px);
+
+  box-shadow:
+    0 0 30px rgba(255,255,255,0.9),
+    0 0 30px rgba(255, 255, 255, 0.992);
+
+  filter: brightness(1.03);
+}
+
+.slide:hover .glowBox {
+  opacity: 0.7;
+  transform: scale(1.04);
+}
+
+.cardLeft {
+  width: 50%;
+  background: black;
+}
+
+.cardLeft img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardRight {
+  color: rgb(0, 0, 0);
+  width: 60%;
+  padding: 30px;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.stack span {
+  background: #15a9ff;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+
+.viewBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #a876f8;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: auto;
+  transition: transform 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+}
+
+.viewBtn:hover {
+  transform: scale(1.02);
+  color: white;
+}
+
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 20;
+
+}
+
+
+.arrow.left {
+  left: 100px;
+}
+
+.arrow.right {
+  right: 100px;
+}
+
+  
+
+.arrow img {
+  width: 80px;
+  height: auto;
+  display: block;
+
+  transition:
+    transform 0.25s ease;
+}
+.arrow img:hover {
+  transform: scale(1.1);
+
+}
+
+
+
+.cardLeft img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardRight {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.modalBox {
+  width: 85%;
+  max-width: 1100px;
+  height: 80vh;
+  background: #0f0f14;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+}
+
+.modalLeft {
+  width: 45%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalLeft img {
+  width: 80%;
+  border-radius: 12px;
+}
+
+.modalRight {
+  width: 55%;
+  padding: 40px;
+  overflow-y: auto;
+  color: white;
+}
+
+.modalRight h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.modalRight p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.modalRight h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.overviewCard {
+  background: #181820;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.overviewList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.overviewList span {
+  background: #222;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background: #2a2a35;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.githubBtn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.githubBtn:hover {
+  background: #574fd6;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 20px;
+  background: #1f1f28;
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tabs span {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.tabs span:hover {
+  transform: scale(1.15);
+  color: white;
+}

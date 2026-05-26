@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:wght@200..800&family=Merriweather:ital,wght@0,300..900;1,300..900&family=Supermercado+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+body {
+  margin: 0;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #00eaff,
+      0 0 20px #00eaff;
+  }
+
+  50% {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #00eaff,
+      0 0 40px #00eaff;
+  }
+
+  100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #00eaff,
+      0 0 20px #00eaff;
+  }
+}
+
+@keyframes button_glow {
+  0% {
+    box-shadow:
+      0 0 5px #fff,
+      0 0 10px #00eaff,
+      0 0 20px #00eaff;
+  }
+
+  50% {
+    box-shadow:
+      0 0 10px #fff,
+      0 0 20px #00eaff,
+      0 0 40px #00eaff;
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px #fff,
+      0 0 10px #00eaff,
+      0 0 20px #00eaff;
+  }
+}
+
+.start-button {
+  cursor: pointer;
+  opacity: 0.8;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  z-index: 10;
+  color: #c278ff;
+
+  position: absolute;
+  bottom: 5%;
+  left: 50.2%;
+  transform: translateX(-50%);
+
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid white;
+  border-radius: 2px;
+
+  animation: button_glow 2.5s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+
+.btn-text {
+  transition: all 0.3s ease;
+}
+
+.bear {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 70px;
+  height: auto;
+
+  opacity: 0;
+
+  transform: translate(-50%, -50%); 
+
+  transition: all 0.3s ease;
+  pointer-events: none; 
+}
+.bear1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 70px;
+  height: 55px;
+
+  opacity: 0;
+
+  transform: translate(-50%, -50%);
+
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.start-button:hover {
+  background: rgb(180, 249, 250);
+  color: rgba(0, 255, 242, 0);
+  border: 0.5px solid rgb(180, 249, 250);
+
+  box-shadow:
+    0 0 15px #fff,
+    0 0 40px #00eaff,
+    0 0 80px #00eaff;
+}
+
+.start-button:hover .btn-text {
+  opacity: 0;
+}
+
+
+.start-button:hover .bear,
+.start-button:hover .bear1 {
+  opacity: 0.8;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.penguin {
+  position: absolute;
+
+  height: 190px;
+  width: auto;
+
+  bottom: 31%;
+  left: 16%;
+  transform: translateX(-50%);
+}
+
+.seal {
+  position: absolute;
+
+  height: 190px;
+  width: auto;
+
+  bottom: 23%;
+  left: 87%;
+  transform: translateX(-50%);
+}
+.arcticfox {
+  position: absolute;
+
+  height: 210px;
+  width: auto;
+
+  bottom: 62%;
+  left: 55%;
+  transform: translateX(-50%);
+}
+
+
+
+
+@keyframes animal_glow {
+  0% {
+    filter: drop-shadow(0 0 6px #fff)
+            drop-shadow(0 0 12px #00eaff);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 12px #fff)
+            drop-shadow(0 0 30px #00eaff);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 6px #fff)
+            drop-shadow(0 0 12px #00eaff);
+  }
+}
+.penguin, .seal, .arcticfox{
+  position: absolute;
+  filter: drop-shadow(0 0 8px rgb(255, 255, 255))
+          drop-shadow(0 0 16px rgb(0, 234, 255));
+  animation: animal_glow 2.5s ease-in-out infinite;
+  transition: all 0.2s ease-in-out;
+}
+
+.typing{
+  font-family: 'Supermercado One';
+  font-size: 5rem;
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  left: 51%;
+  transform: translateX(-50%);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+
+  width: 0;
+
+  animation: typing 3s steps(20) forwards,
+             blink 0.8s infinite,
+             glow 2.5s ease-in-out infinite;
+  }
+
+@keyframes typing {
+from { width: 0 }
+to { width: 16ch; }
+}
+
+@keyframes blink {
+  0% { border-color: white; }
+  50% { border-color: transparent; }
+  100% { border-color: white; }
+}
+@keyframes typing2 {
+from { width: 0 }
+to { width: 13ch; }
+}
+.contactmebubble {
+  overflow: hidden;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+
+  font-family: "VT323", monospace;
+  font-size: 27px;
+  color: black;
+
+  pointer-events: none;
+  
+}
+
+
+.speech-btn {
+  position: absolute;
+  bottom: 43%;
+  left: 98%;
+  transform: translateX(-50%);
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.speech-img {
+  height: 55px;
+  width: auto;
+
+  opacity: 1;
+  filter: drop-shadow(0 0 8px white);
+
+  pointer-events: none;
+}
+@keyframes typing3 {
+from { width: 0 }
+to { width: 39ch; }
+}
+.typing3{
+  font-family: 'Supermercado One';
+  font-size: 3rem;
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+
+  width: 0;
+
+  animation: typing3 3s steps(20) forwards,
+             blink 0.8s infinite,
+             text_glow 2.5s ease-in-out infinite;
+  }
+
+  @keyframes text_glow {
+  0% {
+    text-shadow:
+      0 0 3px #fff,
+      0 0 6px #00eaff;
+  }
+
+  50% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #00eaff;
+  }
+
+  100% {
+    text-shadow:
+      0 0 3px #fff,
+      0 0 6px #00eaff;
+  }
+}
+
+
+.aboutmebubble {
+  overflow: hidden;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+
+  font-family: "VT323", monospace;
+  font-size: 27px;
+  color: black;
+
+  pointer-events: none;
+  
+}
+
+
+.aboutme-btn {
+  position: absolute;
+  bottom: 87%;
+  left: 60%;
+  transform: translateX(-50%);
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.aboutme-img {
+  height: 50px;
+  width: auto;
+
+  opacity: 1;
+  filter: drop-shadow(0 0 10px white);
+
+  pointer-events: none;
+}
+
+.projectsbubble {
+  overflow: hidden;
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+
+  font-family: "VT323", monospace;
+  font-size: 27px;
+  color: black;
+
+  pointer-events: none;
+  
+            
+}
+
+
+.projects-btn {
+  position: absolute;
+  bottom: 55%;
+  left: 20%;
+  transform: translateX(-50%);
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.projects-img {
+  height: 50px;
+  width: auto;
+
+  opacity: 1;
+  filter: drop-shadow(0 0 10px white);
+
+  pointer-events: none;
+  
+}
+
+.home {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.home-img {
+  height: 35px;
+  width: auto;
+
+  filter: drop-shadow(0 0 4px white);
+  pointer-events: none;
+  animation: glow 2.5s ease-in-out infinite;
+}
+.speech-img,
+.aboutme-img,
+.projects-img {
+  height: 50px;
+  width: auto;
+
+  opacity: 1;
+  filter: drop-shadow(0 0 8px white);
+
+  animation: pulse 2s ease-in-out infinite; /* 👈 THIS */
+  transition: all 0.2s ease-in-out;
+
+  pointer-events: none;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+

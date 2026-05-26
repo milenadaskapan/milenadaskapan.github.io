@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+}
+
+.projectsbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(3px) brightness(1);
+}
+
+.iceblock {
+    position: absolute;
+    top: 7.5%;
+    left: 9%;
+    width: 1200px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+    animation: pulse1 2s ease-in-out infinite;
+}
+@keyframes pulse1 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.01);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.projectpenguin {
+    position: absolute;
+    top: 25%;
+    left: 19%;
+    width: 250px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgb(0, 187, 255))
+
+}
+
+.line {
+  position: absolute;
+  left: 42%; 
+
+  font-family: "VT323", monospace;
+  font-size: 34px;
+  color: black;
+
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+
+  width: 0;
+}
+.line1 {
+  top: 28%;
+  animation: penguintyping1 1.5s steps(18) forwards, blink 0.8s infinite;
+}
+
+.line2 {
+  top: 35%;
+  animation: penguintyping2 2s steps(35) forwards;
+  animation-delay: 1.5s;
+}
+
+.line3 {
+  top: 42%;
+  animation: penguintyping3 2s steps(30) forwards;
+  animation-delay: 3.5s;
+}
+
+.line4 {
+  top: 49%;
+  animation: penguintyping3 2s steps(30) forwards;
+  animation-delay: 5.5s;
+}
+@keyframes penguintyping1 {
+  from { width: 0 }
+  to { width: 32ch; }
+}
+
+@keyframes penguintyping2 {
+  from { width: 0 }
+  to { width: 42ch; }
+}
+
+@keyframes penguintyping3 {
+  from { width: 0 }
+  to { width: 39ch; }
+}
+@keyframes penguintyping4 {
+  from { width: 0 }
+  to { width: 10ch; }
+}
+
+.buttonContainer {
+  position: absolute;
+  bottom: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  opacity: 0;
+  animation: showButtons 0.5s ease forwards;
+  animation-delay: 6.5s;
+}
+
+@keyframes showButtons {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.projectButton {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.projectButton:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+.featuredBtn {
+  transform: scale(1.06) translateY(-3px);
+}
+
+.projexit {
+  position: absolute;
+  top: 22%;
+  right: 19%;
+
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.projexit-btn {
+  height: 60px;
+  width: auto;
+  display: block;
+}
